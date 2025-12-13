@@ -158,6 +158,7 @@ h4 {
 
 .gatogif {
     position: absolute;
+    top: 30px;
     bottom: 70px;
     right: 343px;
     width: 142px;
@@ -626,3 +627,4 @@ left: 62px;
     text-align: center;
     z-index: 60; 
 }
+
