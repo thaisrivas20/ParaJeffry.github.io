@@ -3,222 +3,224 @@
 
 
 body {
-    cursor: url('cursor.png'), auto; 
-    background-color: #443e3b;
-    
+    /* Cursor por defecto para el body, usa cursor.png o auto */
+    cursor: url('cursor.png'), auto; 
+    background-color: #443e3b;
+    
 }
 
 .controls-bottom .play-pause-btn:hover {
-    cursor: url('cursor2.gif'),pointer!important;
+    cursor: url('cursor2.gif'),pointer!important;
 }
 .fondo-borroso::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999; 
-    background-color: rgba(0, 0, 0, 0.1); 
-    backdrop-filter: blur(8px); 
-    transition: backdrop-filter 0.5s ease-in-out;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; 
+    background-color: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(8px); 
+    transition: backdrop-filter 0.5s ease-in-out;
 }
 
 /* cambio de fondo */
 
 #background-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
-    /* RUTA EXTERNA: Usando la URL que proporcionaste para el fondo. Si esta falla, sube la imagen a tu repositorio y usa url('nombre_de_la_imagen.jpg'). */
-    background-image: url('https://bettysgraphics.neocities.org/images/backgrounds/pattern%2016.jpg');
-    background-repeat: repeat;
-    transition: opacity 0.90s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url('https://bettysgraphics.neocities.org/images/backgrounds/pattern%2016.jpg');
+    background-repeat: repeat;
+    transition: opacity 0.90s ease-in-out;
 }
 
 /* fuentes */
 p {
-    color: rgb(241, 255, 201);
-    font-size: 30px;
-    font-family: 'Multilingual Hand', cursive;    
-    text-align: center;
+    color: rgb(241, 255, 201);
+    font-size: 30px;
+    font-family: 'Multilingual Hand', cursive;    
+    text-align: center;
 }
 h2{
-    font-family: 'Apes On Parade', sans-serif;
-    text-align: center; 
-    font-size: 30px;                                               
+    font-family: 'Apes On Parade', sans-serif;
+    text-align: center; 
+    font-size: 30px;                                               
 }
 h3 {
-    color: #574226;
-    size: 100px;
-    font-family: 'Apes On Parade', cursive; 
-    margin: 0; 
-    padding: 0;
-    line-height: 55px;
-    text-align: center;
+    color: #574226;
+    size: 100px;
+    font-family: 'Apes On Parade', cursive; 
+    margin: 0; 
+    padding: 0;
+    line-height: 55px;
+    text-align: center;
 }
 h4 {
-    color:#493b29;
-    size: 30px;
-    font-family: 'Multilingual Hand', cursive;    
-    text-align: center;
+    color:#493b29;
+    size: 30px;
+    font-family: 'Multilingual Hand', cursive;    
+    text-align: center;
 }
+/* ======================================= */
+/* 3. ESTRUCTURA PRINCIPAL (Page Wrapper) */
+/* ======================================= */
 
 #page-wrapper {
-    width: 900px; 
-    position: relative;
-    margin: 0 auto; 
-    top: 50px; 
-    transition: transform 0.3s ease-in-out;
+    width: 900px; 
+    position: relative;
+    margin: 0 auto; 
+    top: 50px; 
+    transition: transform 0.3s ease-in-out;
 }
 .tablero {
-     display: block;
-    margin: 0 auto;
-    width: 780px;
-    position: relative;
-    z-index: -1;
-    
+     display: block;
+    margin: 0 auto;
+    width: 780px;
+    position: relative;
+    z-index: -1;
+    
 }
 @media (max-width: 1000px) {
-    .contablero {
-        width: 100%; 
-        max-width: 900px; 
-        height: 600px; 
-        transform: scale(0.8) translateX(-50%); 
-        transform-origin: top left;
-        left: 50%;
-        margin: 0 auto; 
-        top: 100px; 
-        position: relative;
-        width: 780px;
-    
-    }
+    .contablero {
+        width: 100%; 
+        max-width: 900px; 
+        height: 600px; 
+        transform: scale(0.8) translateX(-50%); 
+        transform-origin: top left;
+        left: 50%;
+        margin: 0 auto; 
+        top: 100px; 
+        position: relative;
+        width: 780px;
+    
+    }
 }
 @media (max-width: 600px) {
-    .contablero {
-        /* Centrado y Escalado */
-        transform: scale(0.6) translateX(-50%); 
-        transform-origin: top left;
-        top: 180px; 
-    }
+    .contablero {
+        /* Centrado y Escalado */
+        transform: scale(0.6) translateX(-50%); 
+        transform-origin: top left;
+        top: 180px; 
+    }
 }
 
 .cuadrado1 {
-    
-    border-radius: 20px;
-    display: flex;
-    width: 582px;
-    height: 56px;
-    
+    
+    border-radius: 20px;
+    display: flex;
+    width: 582px;
+    height: 56px;
+    
 }
 .recuadro-mensaje h2 {
-    font-family: 'Roza', sans-serif;
-    margin: 0; 
-    padding: 0;
-    line-height: 55px;
+    font-family: 'Roza', sans-serif;
+    margin: 0; 
+    padding: 0;
+    line-height: 55px;
 }
 .recuadro-mensaje {
-    position: absolute;
-    top: 110px; /* ajusta si lo quieres más arriba o abajo */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 55px;
-    background-color: #B6742E;
-    border-radius: 10px;
-    text-align: center;
-    font-family: "Roza", sans-serif;
-    font-size: 30px;
-    color: rgb(255, 239, 200);
-    z-index: 10;
+    position: absolute;
+    top: 110px; /* ajusta si lo quieres más arriba o abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 55px;
+    background-color: #B6742E;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Roza", sans-serif;
+    font-size: 30px;
+    color: rgb(255, 239, 200);
+    z-index: 10;
 }
 /*decoración */
 .corcho {
-    position: absolute;
-    top :190px;      
-    left:500px;      
-    width: 230px;
-    z-index: 20; 
-    
+    position: absolute;
+    top :190px;      
+    left:500px;      
+    width: 230px;
+    z-index: 20; 
+    
 }
 .compu {
-    position: absolute;
-    top: 490px;
-    left: 240px;
-    width: 150px;
-    z-index: 10;
+    position: absolute;
+    top: 490px;
+    left: 240px;
+    width: 150px;
+    z-index: 10;
 }
 
 
 .gatogif {
-    position: absolute;
-    bottom: 70px;
-    right: 343px;
-    width: 142px;
-    z-index: 15;
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url("cursor2.gif"), pointer;
+    position: absolute;
+    bottom: 70px;
+    right: 343px;
+    width: 142px;
+    z-index: 15;
+    cursor: url("cursor2.gif"), pointer;
 }
 .clase-arco {
-    
-    position: absolute;
-    top: 480px; 
-    left: 50%; 
-    transform: translateX(-50%) scale(0.40);
-    
+    
+    position: absolute;
+    top: 480px; 
+    left: 50%; 
+    transform: translateX(-50%) scale(0.40);
+    
 }
 #contenedor-fortuna {
-    position: absolute;
-    top:  250px; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    pointer-events: none; 
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    width: 150px; 
-    height: 150px;
+    position: absolute;
+    top:  250px; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 150px; 
+    height: 150px;
 }
 #contenedor-fortuna.visible {
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 .galleta-fortuna {
-    position: absolute; 
-    top: 20px;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    z-index: 1002; 
+    position: absolute; 
+    top: 20px;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: 1002; 
 }
 .galleta-completa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 1;
-    transition: opacity 0.1s ease; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity 0.1s ease; 
 }
 .pieza-galleta {
-    position: absolute;
-    width: 100%; 
-    height: 100%;
-    object-fit: contain; 
-    opacity: 0;
-    transition: transform 1.5s ease-out, opacity 0.1s ease-out; 
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 0.1s ease-out; 
 }
 
 #contenedor-fortuna.romper .galleta-completa {
-    opacity: 0; 
+    opacity: 0; 
 }
 
 #contenedor-fortuna.romper .pieza-galleta {
-    opacity: 1; 
+    opacity: 1; 
 }
 #contenedor-fortuna.romper .pieza-izquierda {
 transform: rotate(-30deg) translate(-100px, 0px); 
@@ -234,408 +236,393 @@ left: 62px;
 }
 #contenedor-fortuna
 .papel-fortuna {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 80px; 
-    height: 10px; 
-    background-color: #f7f3e8; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 1001; 
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.1, 0.1); 
-    
-    transition: opacity 0.5s ease-out 1.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1.5s; 
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 80px; 
+    height: 10px; 
+    background-color: #f7f3e8; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1001; 
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1, 0.1); 
+    
+    transition: opacity 0.5s ease-out 1.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1.5s; 
 }
 #contenedor-fortuna.romper .papel-fortuna {
-    opacity: 1;
-    height: 60px; 
-    width: 280px; 
-    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1;
+    height: 60px; 
+    width: 280px; 
+    transform: translate(-50%, -50%) scale(1); 
 }
 
 .texto-fortuna {
-    color: #493b29;
-    font-family: 'Apes On Parade', sans-serif;
-    font-size: 1.2em; 
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in 2s; 
+    color: #493b29;
+    font-family: 'Apes On Parade', sans-serif;
+    font-size: 1.2em; 
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 2s; 
 }
 
 #contenedor-fortuna.romper .texto-fortuna {
-    opacity: 1;
+    opacity: 1;
 }
 #contenedor-fortuna.oculto {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 .dibujop {
-    position: absolute;
-    top: -450px;
-    right: -700px; 
-    transform: scale(0.200);
+    position: absolute;
+    top: -450px;
+    right: -700px; 
+    transform: scale(0.200);
 }
 /* reproductor*/
 .music-player-container {
-    position: absolute;
-    top: 210px;
-    left: 340px;
-    width: 150px;
-    height: 230px;
-    z-index: 10;
-    background-color: #EFE4D0; 
-    border-radius: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 15;
-    box-shadow: 
-        6px 6px 12px rgba(175, 175, 175, 0.4), 
-        -6px -6px 12px rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 210px;
+    left: 340px;
+    width: 150px;
+    height: 230px;
+    z-index: 10;
+    background-color: #EFE4D0; 
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 15;
+    box-shadow: 
+        6px 6px 12px rgba(175, 175, 175, 0.4), 
+        -6px -6px 12px rgba(255, 255, 255, 1);
 }
 .album-art-square {
-    width: 149px;
-    height: 123px;
-    border-radius: 10px; 
-    overflow: hidden;
-    margin-bottom: 10px;
-    box-shadow: 
-        inset 4px 4px 6px rgba(105, 57, 57, 0.5), 
-        inset -4px -4px 6px rgba(255, 255, 255, 0.8); 
-    
-    background-color: #c0a37e; 
+    width: 149px;
+    height: 123px;
+    border-radius: 10px; 
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 
+        inset 4px 4px 6px rgba(105, 57, 57, 0.5), 
+        inset -4px -4px 6px rgba(255, 255, 255, 0.8); 
+    
+    background-color: #c0a37e; 
 }
 .song-info {
-    text-align: center;
-    color: #444; 
-    margin-bottom: 10px;
-    
+    text-align: center;
+    color: #444; 
+    margin-bottom: 10px;
+    
 }
 .song-info .title {
-    font-size: 1em; 
-    font-weight: bold;
-    font-family: 'Apes On Parade', sans-serif;
-    text-align: center; 
-    
+    font-size: 1em; 
+    font-weight: bold;
+    font-family: 'Apes On Parade', sans-serif;
+    text-align: center; 
+    
 }
 .song-info .artist {
-    font-size: 0.6em;
-    color:#493b29;
-    font-family: 'Multilingual Hand', cursive;  
+    font-size: 0.6em;
+    color:#493b29;
+    font-family: 'Multilingual Hand', cursive;  
 
 }
 .progress-bar-container {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin-bottom: 10px;
-    color: #444; 
-    font-family: 'Apes On Parade', sans-serif;
-    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 10px;
+    color: #444; 
+    font-family: 'Apes On Parade', sans-serif;
+    font-size: 0.7em;
 }
 .progress-bar {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 5px; 
-    margin: 0 5px;
-    border-radius: 3px;
-    background: #CCC; 
-    box-shadow: 
-        inset 1px 1px 2px rgba(0, 0, 0, 0.2), 
-        inset -1px -1px 2px rgba(255, 255, 255, 0.5);
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px; 
+    margin: 0 5px;
+    border-radius: 3px;
+    background: #CCC; 
+    box-shadow: 
+        inset 1px 1px 2px rgba(0, 0, 0, 0.2), 
+        inset -1px -1px 2px rgba(255, 255, 255, 0.5);
 }
 .progress-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 10px; 
-    height: 10px;
-    border-radius: 50%;
-    background: #B6742E;
-    cursor: pointer;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background: #B6742E;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 /* 6. BOTONES DE CONTROL */
 .controls-bottom {
-    display: flex;
-    justify-content: space-around;
-    width: 99%;
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer; 
+    display: flex;
+    justify-content: space-around;
+    width: 99%;
+    cursor: url('cursor2.gif'), pointer; 
 }
 .controls-bottom button {
-    background-color: #EFE4D0; 
-    border: none;
-    border-radius: 50%;
-    width: 35px; 
-    height: 35px;
-    font-size: 1em; 
-    cursor: pointer;
-    color: #444; 
-    outline: none;
-    box-shadow: 
-        3px 3px 6px rgba(175, 175, 175, 0.4),
-        -3px -3px 6px rgba(255, 255, 255, 1);
-    transition: all 0.1s ease;
+    background-color: #EFE4D0; 
+    border: none;
+    border-radius: 50%;
+    width: 35px; 
+    height: 35px;
+    font-size: 1em; 
+    cursor: pointer;
+    color: #444; 
+    outline: none;
+    box-shadow: 
+        3px 3px 6px rgba(175, 175, 175, 0.4),
+        -3px -3px 6px rgba(255, 255, 255, 1);
+    transition: all 0.1s ease;
 }
 .controls-bottom button:active {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer; 
-    box-shadow: 
-        inset 2px 2px 5px rgba(175, 175, 175, 0.5),
-        inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+    cursor: url('cursor2.gif'), pointer; 
+    box-shadow: 
+        inset 2px 2px 5px rgba(175, 175, 175, 0.5),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.8);
 }
 .controls-bottom .play-pause-btn {
-    width: 45px; 
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer; 
-    height: 45px;
-    font-size: 1.5em; 
-    background-color: #B6742E; 
-    color: #EFE4D0; 
-    box-shadow: 
-        3px 3px 8px rgba(95, 23, 23, 0.4),
-        -3px -3px 8px rgba(255, 255, 255, 0.2);
+    width: 45px; 
+    cursor: url('cursor2.gif'), pointer; 
+    height: 45px;
+    font-size: 1.5em; 
+    background-color: #B6742E; 
+    color: #EFE4D0; 
+    box-shadow: 
+        3px 3px 8px rgba(95, 23, 23, 0.4),
+        -3px -3px 8px rgba(255, 255, 255, 0.2);
 }
 .tarjeta {
-    position: absolute;
-    top: 204px; 
-    left: 514px;
-    width: 140px; 
-    height: 300px; 
-    background-color: #E6E1D2; 
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    text-align: left;
-    overflow-y: auto; 
+    position: absolute;
+    top: 204px; 
+    left: 510px;
+    width: 140px; 
+    height: 300px; 
+    background-color: #E6E1D2; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+    overflow-y: auto; 
 }
 .mari {
-  position: absolute;
-  top: 312px;
-  transform: scale(0.4);
-  left: 600px;
-  height: auto !important;
-  z-index: 1000;
-  display: block !important; 
+  position: absolute;
+  top: 312px;
+  transform: scale(0.4);
+  left: 600px;
+  height: auto !important;
+  z-index: 220;
+  display: block !important; 
 }
 /* carta*/
 .carta-interactiva {
-    
-    position: absolute;
-    z-index: 25;
-    width: 120px;
-    top: 450px;
-    left: 750px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    animation: shimmer 4s infinite linear;
+    
+    position: absolute;
+    z-index: 25;
+    width: 120px;
+    top: 450px;
+    left: 750px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: shimmer 4s infinite linear;
 }
 .carta-interactiva:hover {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer!important;
-    transform: scale(1.1); 
+    cursor: url('cursor2.gif'), pointer!important;
+    transform: scale(1.1); 
 }
 @keyframes shimmer {
-    0%, 100% {
-        filter: drop-shadow(0 0 5px rgba(255, 255, 150, 0.0)); 
-    }
-    50% {
-        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
-    }
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 150, 0.0)); 
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8)); 
+    }
 }
 #modal-carta {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url("cursor2.gif") pointer!important;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; 
+    cursor: url("cursor2.gif") pointer!important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
 }
 .modal-oculto .modal-contenido {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url("cursor2.gif") pointer!important;
-    opacity: 0;
-    transform: perspective(600px) rotateX(-90deg) scale(0.5); 
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animación más dramática */
+    cursor: url("cursor2.gif") pointer!important;
+    opacity: 0;
+    transform: perspective(600px) rotateX(-90deg) scale(0.5); 
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animación más dramática */
 }
 .modal-visible .modal-contenido {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url("cursor2.gif") pointer!important;
-    opacity: 1;
-    transform: perspective(600px) rotateX(0deg) scale(1); 
+    cursor: url("cursor2.gif") pointer!important;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg) scale(1); 
 }
 .modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-contenido {
-    background-color: #f7f3e8; 
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    max-width: 500px;
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 1001;
-    text-align: left;
-   
+    background-color: #f7f3e8; 
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+    text-align: left;
+   
 }
 .fondo-borroso::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999; 
-    background-color: rgba(212, 28, 28, 0.144); 
-    backdrop-filter: blur(8px); 
-    transition: backdrop-filter 0.5s ease-in-out;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; 
+    background-color: rgba(212, 28, 28, 0.144); 
+    backdrop-filter: blur(8px); 
+    transition: backdrop-filter 0.5s ease-in-out;
 }
 .modal-contenido h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 0;
-    color: #B6742E;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: #B6742E;
 }
 .modal-contenido p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-top: 20px;
-    color: #493b29; 
-    font-family: 'Roza', sans-serif; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #493b29; 
+    font-family: 'Roza', sans-serif; 
 }
-.cerrar-modal  {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'),pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    color: #ffffff;
-    line-height: 1;
-    transition: transform 0.2s;
+.cerrar-modal  {
+    cursor: url('cursor2.gif'),pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 1;
+    transition: transform 0.2s;
 }
 .modal-mostrar {
-    display: flex !important;
-    pointer-events: auto !important;
+    display: flex !important;
+    pointer-events: auto !important;
 }
 .fotos {
-    width: 245px; 
-    height: 180px; 
-    z-index: 90;
-    overflow: hidden; 
-    position: absolute;
-    top:  240px;
-    left: 46%;
-    transform: translateX(50%);
-    border: 5px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    
+    width: 245px; 
+    height: 180px; 
+    z-index: 90;
+    overflow: hidden; 
+    position: absolute;
+    top:  240px;
+    left: 46%;
+    transform: translateX(50%);
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    
 }
 .carousel-slide {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-    height: 100%;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    height: 100%;
 }
 .carousel-img {
-    min-width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-   
+    min-width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+   
 }
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(182, 116, 46, 0.8); 
-    color: white;
-    border: 2px solid white; 
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.3s;
-    user-select: none; 
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(182, 116, 46, 0.8); 
+    color: white;
+    border: 2px solid white; 
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+    user-select: none; 
+    cursor: url('cursor2.gif'), pointer;
 }
 .carousel-btn:hover {
-    background-color: #B6742E; 
-    transform: translateY(-50%) scale(1.1); 
+    background-color: #B6742E; 
+    transform: translateY(-50%) scale(1.1); 
 }
 .prev-btn {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer;
-    left: 10px;
+    cursor: url('cursor2.gif'), pointer;
+    left: 10px;
 }
 .prev-btn:hover{
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer;
+    cursor: url('cursor2.gif'), pointer;
 }
 .next-btn {
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer;
-    right: 10px;
+    cursor: url('cursor2.gif'), pointer;
+    right: 10px;
 }
 .next-btn:hover{
-    /* Asumiendo 'cursor2.gif' está al mismo nivel que style.css. */
-    cursor: url('cursor2.gif'), pointer;
+    cursor: url('cursor2.gif'), pointer;
 }
 .fondofoto {
-  position: absolute; 
-    top: 202px;  
-    left: 46%;
-    transform: translateX(108px);
-    width:290px;     
-    height: 250px;
-    background-color: #d1b18f;
-    border-radius: 20px;
-    line-height: 55px;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    
+  position: absolute; 
+    top: 202px;  
+    left: 46%;
+    transform: translateX(108px);
+    width:290px;     
+    height: 250px;
+    background-color: #d1b18f;
+    border-radius: 20px;
+    line-height: 55px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    
 }
 .texto-nosotros {
-    position: absolute;
-    top: 180px; 
-    left: 47%;
-    transform: translateX(100px); 
-    width: 259px; 
-    height: 42px; 
-    text-align: center;
-    z-index: 60; 
+    position: absolute;
+    top: 180px; 
+    left: 47%;
+    transform: translateX(100px); 
+    width: 259px; 
+    height: 42px; 
+    text-align: center;
+    z-index: 60; 
 }
-
-
