@@ -3,7 +3,7 @@
 
 
 body {
-    /* Cursor por defecto para el body, usa cursor.png o auto */
+    /* Cursor por defecto para el body*/
     cursor: url('cursor.png'), auto; 
     background-color: #443e3b;
     
@@ -622,4 +622,5 @@ left: 62px;
     text-align: center;
     z-index: 60; 
 }
+
 
