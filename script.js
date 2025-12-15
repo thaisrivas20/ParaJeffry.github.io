@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Amor completo", 
             artist: "Mon Laferte", 
-            src: "Amor completo.mp3",
+            src: "Amor Completo.mp3",
             cover: "portada4.jpg" 
         },
         {
@@ -218,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://bettysgraphics.neocities.org/images/backgrounds/bubbles%204.gif',
         'https://bettysgraphics.neocities.org/images/backgrounds/pattern%20155.gif',
         'https://bettysgraphics.neocities.org/images/backgrounds/strawberries%202.gif',
-        'https://bettysgraphics.neocities.org/images/backgrounds/pattern%20198.gif'
+        'https://bettysgraphics.neocities.org/images/backgrounds/pattern%20198.gif',
+        'https://bettysgraphics.neocities.org/images/backgrounds/104.GIF'
         
     ];
 
@@ -298,4 +299,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error");
     }
 });
+
 
