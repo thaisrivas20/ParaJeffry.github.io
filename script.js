@@ -295,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, totalAnimationTime);
         });
     } else {
-        console.error("Error: Elementos del gatito o contenedor-fortuna no encontrados.");
+        console.error("Error");
     }
 });
+
